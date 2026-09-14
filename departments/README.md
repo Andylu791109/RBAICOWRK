@@ -6,7 +6,7 @@
 
 - [`LIVE_COMMERCE.md`](LIVE_COMMERCE.md)：直播
 - [`SALES.md`](SALES.md)：業務
-- [`PRODUCT.md`](PRODUCT.md)：產品
+- [`PRODUCT.md`](PRODUCT.md)：產品資料轉譯、教育內容與 QA／工具書
 - [`CUSTOMER_SERVICE.md`](CUSTOMER_SERVICE.md)：客服
 - [`HR_ADMIN.md`](HR_ADMIN.md)：人資與總務行政
 - [`SHIPPING_WAREHOUSE.md`](SHIPPING_WAREHOUSE.md)：出貨與倉庫
@@ -15,6 +15,10 @@
 - [`MANAGEMENT.md`](MANAGEMENT.md)：主管與跨部門
 - [`MARKETING.md`](MARKETING.md)：行銷、官網營運與成效追蹤
 - [`SPA.md`](SPA.md)：SPA 課程、服務與活動
+
+## 可直接使用的部門指令
+
+[`agents/`](agents/) 收錄各部門依主管訪談調整過、可直接複製貼上的 AI 助手指令。已有指令的部門優先使用該檔，本索引的通用情境作為沒有指令時的備援。
 
 ## 已校準的公司情境
 

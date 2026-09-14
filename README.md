@@ -13,6 +13,10 @@
 **給 AI 直接讀取的 Raw 網址：**
 https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WIZARD.md
 
+## 已有專屬指令的部門
+
+業務、財務、行銷、產品、SPA、跨部門平台業績可直接使用 [`departments/agents/`](departments/agents/) 內對應的指令，不必從通用流程開始。
+
 ## 完成後會得到什麼
 
 - `我的AI工作夥伴設定.md`：可放進不同 AI 的個人或專案指令。
@@ -37,7 +41,9 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`COMPANY_AI_RULES.md`](COMPANY_AI_RULES.md) | 公司共通的 AI 協作底線 |
 | [`PRIVACY_AND_SUBMISSION.md`](PRIVACY_AND_SUBMISSION.md) | 資料遮蔽與作業提交規則 |
 | [`departments/`](departments/) | 各部門可辨認的工作情境 |
+| [`departments/agents/`](departments/agents/) | 各部門可直接複製使用的 AI 助手指令 |
 | [`departments/CALIBRATED_CONTEXT.md`](departments/CALIBRATED_CONTEXT.md) | 已收到的主管校準工作與驗收條件 |
+| [`templates/DELIVERY_CHECK.md`](templates/DELIVERY_CHECK.md) | 交付前自檢表（依主管驗收標準整理） |
 | [`platform-guides/`](platform-guides/) | 各 AI 平台的保存方式 |
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |
@@ -53,7 +59,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 
 本 Repo 不存放真實客戶資料、訂單資料、薪資、人事紀錄、財務數字、未公開產品資訊或公司機密。
 
-目前已整合業務、財務、人資與總務行政、行銷、SPA，以及跨部門平台業績的去識別化主管回饋。原始訪談不放入公開 Repo。
+目前已整合業務、財務、人資與總務行政、行銷、產品、SPA，以及跨部門平台業績的去識別化主管回饋。原始訪談不放入公開 Repo。
 
 ## 主管校準入口
 
