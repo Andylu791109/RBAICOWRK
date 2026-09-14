@@ -13,9 +13,9 @@
 **給 AI 直接讀取的 Raw 網址：**
 https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WIZARD.md
 
-## 已有專屬指令的部門
+## 已校準的部門
 
-業務、財務、行銷、產品、SPA、跨部門平台業績可直接使用 [`departments/agents/`](departments/agents/) 內對應的指令，不必從通用流程開始。
+業務、財務、行銷、產品、SPA、跨部門平台業績、人資與總務行政已依主管訪談校準。同仁複製 [`WORKER_START_PROMPT.md`](WORKER_START_PROMPT.md) 中自己部門那一段（含連結）貼給 AI 即可開始，不必從通用流程走。
 
 ## 完成後會得到什麼
 
@@ -41,9 +41,10 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`COMPANY_AI_RULES.md`](COMPANY_AI_RULES.md) | 公司共通的 AI 協作底線 |
 | [`PRIVACY_AND_SUBMISSION.md`](PRIVACY_AND_SUBMISSION.md) | 資料遮蔽與作業提交規則 |
 | [`departments/`](departments/) | 各部門可辨認的工作情境 |
-| [`departments/agents/`](departments/agents/) | 各部門可直接複製使用的 AI 助手指令 |
+| [`WORKER_START_PROMPT.md`](WORKER_START_PROMPT.md) | 同仁版啟動 Prompt，依部門給連結 |
+| [`departments/agents/`](departments/agents/) | 各部門 AI 助手指令，供 AI 讀取執行 |
 | [`departments/CALIBRATED_CONTEXT.md`](departments/CALIBRATED_CONTEXT.md) | 已收到的主管校準工作與驗收條件 |
-| [`templates/DELIVERY_CHECK.md`](templates/DELIVERY_CHECK.md) | 交付前自檢表（依主管驗收標準整理） |
+| [`facilitator/DELIVERY_CHECK.md`](facilitator/DELIVERY_CHECK.md) | 主管與講師驗收時的對照表 |
 | [`platform-guides/`](platform-guides/) | 各 AI 平台的保存方式 |
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |

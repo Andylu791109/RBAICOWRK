@@ -24,7 +24,7 @@
 
 目前已收到業務、財務、人資與總務行政、行銷、產品、SPA，以及跨部門平台業績的主管回饋，統一整理於 [`departments/CALIBRATED_CONTEXT.md`](../departments/CALIBRATED_CONTEXT.md)。
 
-- 已有主管校準的部門，請同仁直接使用 [`departments/agents/`](../departments/agents/) 內對應的指令，不必從通用流程開始。
+- 已有主管校準的部門，直接把 [`WORKER_START_PROMPT.md`](../WORKER_START_PROMPT.md) 中對應那一段（含連結）交給同仁，不必從通用流程開始。
 - 同仁選定部門後，AI 優先使用對應章節的「主管已確認」內容產生工作選項。
 - 「AI 課堂試用建議」可以用於練習，但需保留試用標示。
 - 「待確認」內容由同仁帶回主管補充，不得由講師或 AI 猜測。
@@ -51,7 +51,7 @@
 3. 第一次與修正版的差異。
 4. 一條因測試而新增的個人規則。
 5. 主管校準部門需標示成果是否符合該部門的採用前核對與驗收條件。
-6. 已對照 [`templates/DELIVERY_CHECK.md`](../templates/DELIVERY_CHECK.md) 完成交付前自檢。
+主管與講師驗收時可對照 [`DELIVERY_CHECK.md`](DELIVERY_CHECK.md)，但不要求同仁自己再走一遍；該檢查已寫進各部門的 AI 指令。
 
 ## 持續追蹤與彙整
 
