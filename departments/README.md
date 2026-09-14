@@ -13,6 +13,7 @@
 - [`PROCUREMENT.md`](PROCUREMENT.md)：採購
 - [`FINANCE.md`](FINANCE.md)：財務
 - [`MANAGEMENT.md`](MANAGEMENT.md)：主管與跨部門
+- [`MARKETING.md`](MARKETING.md)：行銷、官網營運與成效追蹤
 - [`SPA.md`](SPA.md)：SPA 課程、服務與活動
 
 ## 已校準的公司情境

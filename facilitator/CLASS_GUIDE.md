@@ -22,7 +22,7 @@
 
 ## 使用主管校準資料
 
-目前已收到業務、財務、人資與總務行政、SPA，以及跨部門平台業績的主管回饋，統一整理於 [`departments/CALIBRATED_CONTEXT.md`](../departments/CALIBRATED_CONTEXT.md)。
+目前已收到業務、財務、人資與總務行政、行銷、SPA，以及跨部門平台業績的主管回饋，統一整理於 [`departments/CALIBRATED_CONTEXT.md`](../departments/CALIBRATED_CONTEXT.md)。
 
 - 同仁選定部門後，AI 優先使用對應章節的「主管已確認」內容產生工作選項。
 - 「AI 課堂試用建議」可以用於練習，但需保留試用標示。
