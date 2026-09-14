@@ -40,6 +40,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |
 | [`facilitator/COMPATIBILITY_TEST.md`](facilitator/COMPATIBILITY_TEST.md) | 不同 AI 的相容性測試 |
+| [`facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md`](facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md) | 主管部門情境校準表 |
 | [`CHANGELOG.md`](CHANGELOG.md) | 版本與待完成事項 |
 
 ## 適用範圍
