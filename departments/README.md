@@ -6,7 +6,7 @@
 
 - [`LIVE_COMMERCE.md`](LIVE_COMMERCE.md)：直播
 - [`SALES.md`](SALES.md)：業務
-- [`PRODUCT.md`](PRODUCT.md)：產品
+- [`PRODUCT.md`](PRODUCT.md)：產品資料轉譯、教育內容與 QA／工具書
 - [`CUSTOMER_SERVICE.md`](CUSTOMER_SERVICE.md)：客服
 - [`HR_ADMIN.md`](HR_ADMIN.md)：人資與總務行政
 - [`SHIPPING_WAREHOUSE.md`](SHIPPING_WAREHOUSE.md)：出貨與倉庫
