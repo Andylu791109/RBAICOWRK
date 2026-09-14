@@ -3,6 +3,16 @@
 填寫時間：約 10～15 分鐘
 目的：讓 AI 訓練內容貼近各部門真實工作，避免用抽象題目要求同仁憑空想像。
 
+## 建議優先使用互動版
+
+主管不需要自己閱讀並逐欄填寫本表。建議將以下文件交給 AI，由 AI 依部門一次問一題，最後自動回寫成本表格式：
+
+- [主管部門 AI 情境校準精靈](SUPERVISOR_CALIBRATION_WIZARD.md)
+- 給 AI 直接讀取的 Raw 網址：
+  https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/facilitator/SUPERVISOR_CALIBRATION_WIZARD.md
+
+本頁保留作為無法讀取網址時的手動備援與輸出格式參考。
+
 > 請不要從「AI 可以做什麼」開始想。請回想最近一至兩週，部門內實際發生、反覆處理、容易出錯或很花時間的工作。
 
 ## 一、基本資訊

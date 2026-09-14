@@ -40,6 +40,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |
 | [`facilitator/COMPATIBILITY_TEST.md`](facilitator/COMPATIBILITY_TEST.md) | 不同 AI 的相容性測試 |
+| [`facilitator/SUPERVISOR_CALIBRATION_WIZARD.md`](facilitator/SUPERVISOR_CALIBRATION_WIZARD.md) | 由 AI 逐題訪談主管並回寫部門報告 |
 | [`facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md`](facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md) | 主管部門情境校準表 |
 | [`CHANGELOG.md`](CHANGELOG.md) | 版本與待完成事項 |
 
@@ -48,6 +49,12 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 這套工具可交給能讀取網頁或 Markdown 內容的 AI 使用。如果 AI 無法讀取外部網址，請開啟文件後複製全文貼入對話。
 
 本 Repo 不存放真實客戶資料、訂單資料、薪資、人事紀錄、財務數字、未公開產品資訊或公司機密。
+
+## 主管校準入口
+
+主管可直接把以下 Raw 網址交給 AI，由 AI 依部門逐題訪談並產出《部門 AI 情境校準報告》：
+
+https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/facilitator/SUPERVISOR_CALIBRATION_WIZARD.md
 
 ## 設計說明
 
