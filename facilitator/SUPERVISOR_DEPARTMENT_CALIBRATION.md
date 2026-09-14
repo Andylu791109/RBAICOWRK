@@ -7,6 +7,7 @@
 
 主管不需要自己閱讀並逐欄填寫本表。建議將以下文件交給 AI，由 AI 依部門一次問一題，最後自動回寫成本表格式：
 
+- [直接複製：主管部門校準啟動 Prompt](SUPERVISOR_START_PROMPT.md)
 - [主管部門 AI 情境校準精靈](SUPERVISOR_CALIBRATION_WIZARD.md)
 - 給 AI 直接讀取的 Raw 網址：
   https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/facilitator/SUPERVISOR_CALIBRATION_WIZARD.md

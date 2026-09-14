@@ -9,7 +9,11 @@
 - [`PRODUCT.md`](PRODUCT.md)：產品
 - [`CUSTOMER_SERVICE.md`](CUSTOMER_SERVICE.md)：客服
 - [`HR_ADMIN.md`](HR_ADMIN.md)：人資與總務行政
+- [`SHIPPING_WAREHOUSE.md`](SHIPPING_WAREHOUSE.md)：出貨與倉庫
+- [`PROCUREMENT.md`](PROCUREMENT.md)：採購
 - [`FINANCE.md`](FINANCE.md)：財務
 - [`MANAGEMENT.md`](MANAGEMENT.md)：主管與跨部門
 
 部門文件中的例子全部是通用或虛構情境。AI 不得據此推測公司現行規則。
+
+出貨、倉庫、採購與直播的選項應以基層執行人員也能直接看懂的方式呈現，必要時在每個選項後加入括號範例。

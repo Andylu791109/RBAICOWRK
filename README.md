@@ -26,6 +26,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 - 將內容區分為「已確認／合理推論／待確認」。
 - 高風險事項必須由人確認。
 - 個人設定必須經過真實工作測試後才能定稿。
+- 出貨、倉庫、採購與直播等執行工作採用小白手把手問法，必要時每個選項附括號範例。
 
 ## Repo 導覽
 
@@ -40,6 +41,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |
 | [`facilitator/COMPATIBILITY_TEST.md`](facilitator/COMPATIBILITY_TEST.md) | 不同 AI 的相容性測試 |
+| [`facilitator/SUPERVISOR_START_PROMPT.md`](facilitator/SUPERVISOR_START_PROMPT.md) | 可直接貼入任何 AI 的主管版啟動 Prompt |
 | [`facilitator/SUPERVISOR_CALIBRATION_WIZARD.md`](facilitator/SUPERVISOR_CALIBRATION_WIZARD.md) | 由 AI 逐題訪談主管並回寫部門報告 |
 | [`facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md`](facilitator/SUPERVISOR_DEPARTMENT_CALIBRATION.md) | 主管部門情境校準表 |
 | [`CHANGELOG.md`](CHANGELOG.md) | 版本與待完成事項 |
@@ -52,7 +54,11 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 
 ## 主管校準入口
 
-主管可直接把以下 Raw 網址交給 AI，由 AI 依部門逐題訪談並產出《部門 AI 情境校準報告》：
+主管只需複製以下啟動 Prompt，貼入正在使用的 AI：
+
+[主管部門校準｜一鍵啟動 Prompt](facilitator/SUPERVISOR_START_PROMPT.md)
+
+啟動 Prompt 會要求 AI 讀取以下 Raw 文件，再依部門逐題訪談並產出《部門 AI 情境校準報告》：
 
 https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/facilitator/SUPERVISOR_CALIBRATION_WIZARD.md
 
