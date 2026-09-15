@@ -17,6 +17,13 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 
 業務、財務、行銷、產品、SPA、跨部門平台業績、人資與總務行政已依主管訪談校準。同仁複製 [`WORKER_START_PROMPT.md`](WORKER_START_PROMPT.md) 中自己部門那一段（含連結）貼給 AI 即可開始，不必從通用流程走。
 
+## 課程教材
+
+- [`course/學員練習包.md`](course/學員練習包.md)：課堂練習與課後作業。
+- [`course/需求釐清引導.md`](course/需求釐清引導.md)：不知道怎麼描述需求時照這份走。
+- [`facilitator/講師講稿.md`](facilitator/講師講稿.md)：主管要自行開課時使用。
+- [`docs/`](docs/)：簡報網頁版（互動簡報、執行長審閱版）。
+
 ## 完成後會得到什麼
 
 - `我的AI工作夥伴設定.md`：可放進不同 AI 的個人或專案指令。
