@@ -1,0 +1,429 @@
+<title>AI 工作力實戰 開場</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1116; --bg2:#131922; --ink:#E9EDF3; --dim:#9AA4B2; --dim2:#6E7787;
+  --amber:#FFB020; --blue:#2B6BE4; --mint:#5CD6B4; --rose:#FF7A6B;
+  --sans:'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{background:#090B0F;padding:0 16px;padding-block:26px 56px;min-height:100vh;font-family:var(--sans)}
+.hd{max-width:1340px;margin:0 auto 20px;color:var(--ink)}
+.hd h2{font-size:clamp(20px,3.2vw,30px);font-weight:900;margin-bottom:8px;text-wrap:balance}
+.hd p{font-size:clamp(13px,2.1vw,15px);line-height:1.75;color:var(--dim);max-width:64ch}
+.deck{max-width:1340px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(12px,2.2vw,22px)}
+.frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;
+  box-shadow:0 12px 36px rgba(0,0,0,.5)}
+.frame > .s{position:absolute;top:0;left:0;transform-origin:top left;transform:scale(var(--k,1))}
+.foot{max-width:1340px;margin:32px auto 0;color:#6C7480;font-size:clamp(12px,2vw,14px);line-height:1.9}
+.foot b{color:var(--amber)}
+
+.s{width:1920px;height:1080px;overflow:hidden;position:relative;display:flex;flex-direction:column;
+  justify-content:center;padding:104px 130px;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+.s.alt{background:var(--bg2)}
+.kick{font-size:25px;letter-spacing:.3em;color:var(--dim2);margin-bottom:22px}
+.mark{font-size:31px;font-weight:700;letter-spacing:.05em;color:var(--amber);margin-bottom:14px}
+h1{font-size:96px;font-weight:900;line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
+h1.sm{font-size:74px}
+h1 em{font-style:normal;color:var(--amber)}
+h1 .mint{color:var(--mint)}
+.sub{font-size:32px;line-height:1.62;color:var(--dim);margin-top:26px;max-width:1500px}
+.sub b{color:var(--ink)}
+.pgn{position:absolute;right:130px;bottom:60px;font-size:23px;color:#49525F}
+.stamp{position:absolute;left:130px;bottom:60px;font-size:24px;letter-spacing:.1em;color:#4E5866}
+
+.talk{display:flex;flex-direction:column;gap:18px;max-width:1480px}
+.me,.ai{max-width:78%;padding:22px 30px;font-size:31px;line-height:1.55;border-radius:26px}
+.me{align-self:flex-end;background:var(--blue);color:#fff;border-bottom-right-radius:7px}
+.ai{align-self:flex-start;background:#1A212B;color:#D7DEE8;border-bottom-left-radius:7px}
+.ai b{color:var(--amber)}
+.ai.warm{background:#23201A;color:#F0E3CE}
+
+.bar{display:flex;align-items:center;gap:18px;background:#171C24;border:2px solid #262E3A;
+  border-radius:22px;padding:24px 32px;max-width:1120px}
+.bar span{font-size:30px;color:#5E6875}
+.caret{width:3px;height:34px;background:var(--amber)}
+
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.tile{background:#151B23;border:2px solid #222A35;border-radius:20px;padding:30px 30px}
+.tile.warm{background:#1B1A16;border-color:#33301F}
+.tile h3{font-size:32px;font-weight:900;margin:14px 0 10px;line-height:1.3}
+.tile p{font-size:25px;line-height:1.6;color:#939EAC}
+.tile .big{font-size:124px;font-weight:900;color:var(--amber);line-height:1}
+.tile .emo{font-size:52px;line-height:1}
+.tile .no{font-size:26px;font-weight:900;color:var(--amber);letter-spacing:.14em}
+
+.rows{display:flex;flex-direction:column;gap:20px}
+.rw{display:flex;align-items:center;gap:22px;font-size:33px;line-height:1.5;color:#CBD3DD}
+.rw .emo{font-size:44px;width:60px;text-align:center;flex:none}
+
+.chips{display:flex;flex-wrap:wrap;gap:15px;margin-top:24px}
+.chip{font-size:29px;padding:13px 25px;border-radius:999px;background:#1A212B;border:2px solid #2A3341;color:#AEB8C4}
+.chip.on{background:var(--amber);border-color:var(--amber);color:#1A1408;font-weight:700}
+.chip.gh{border-style:dashed;color:#6E7787}
+
+.split{display:flex;gap:52px;align-items:center}
+.note{background:#1B1A16;border-left:8px solid var(--amber);border-radius:0 16px 16px 0;
+  padding:26px 32px;font-size:29px;line-height:1.6;color:#E3D9C6;margin-top:28px;max-width:1480px}
+.note b{color:var(--amber)}
+
+/* 手機推播卡（Agent 示範） */
+.phone{width:660px;background:#12171E;border:2px solid #27313E;border-radius:30px;padding:28px 30px;flex:none}
+.phone .top{display:flex;align-items:center;gap:14px;font-size:24px;color:#6E7787;margin-bottom:20px}
+.phone .dot{width:14px;height:14px;border-radius:50%;background:var(--mint)}
+.phone h4{font-size:36px;font-weight:900;margin-bottom:18px}
+.phone li{list-style:none;font-size:26px;line-height:1.5;color:#C3CCD7;padding:13px 0;border-top:1px solid #222B36;
+  display:flex;gap:14px}
+.phone li span{flex:none}
+.up{color:var(--rose);font-weight:700}
+.dn{color:var(--mint);font-weight:700}
+
+.flow{display:flex;align-items:stretch;gap:0;margin-top:34px}
+.fstep{flex:1;background:#151B23;border:2px solid #222A35;padding:28px 26px;position:relative}
+.fstep:first-child{border-radius:18px 0 0 18px}
+.fstep:last-child{border-radius:0 18px 18px 0}
+.fstep + .fstep{border-left:none}
+.fstep b{display:block;font-size:25px;color:var(--amber);letter-spacing:.1em;margin-bottom:12px}
+.fstep p{font-size:27px;line-height:1.5;color:#B7C0CC}
+
+/* 開場情境圖：先讓大家對號入座，再談原理 */
+.scene-img{position:absolute;right:0;bottom:0;width:65%;height:100%;object-fit:cover;object-position:center right;opacity:.94}
+.scene-shade{position:absolute;inset:0;background:linear-gradient(90deg,#131922 0%,#131922 31%,rgba(19,25,34,.88) 45%,rgba(19,25,34,.12) 73%,rgba(19,25,34,.02) 100%)}
+.ask-list{display:flex;flex-direction:column;gap:16px;margin-top:36px;max-width:810px}
+.ask{display:flex;gap:20px;align-items:center;font-size:28px;line-height:1.45;color:#D5DDE8;background:rgba(18,23,30,.78);border-left:5px solid var(--amber);padding:15px 20px;border-radius:0 14px 14px 0}
+.ask .n{color:var(--amber);font-size:22px;font-weight:900;letter-spacing:.08em;flex:none}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px;max-width:1600px}
+.move{min-height:256px;border-radius:22px;padding:27px 25px;display:flex;flex-direction:column;justify-content:space-between}
+.move .ico{font-size:55px;line-height:1}.move b{font-size:34px;line-height:1.2}.move p{font-size:24px;line-height:1.5;color:#D2DAE5;margin-top:12px}.move small{font-size:21px;color:#CBD3DD}.m1{background:#20345A}.m2{background:#1E4F47}.m3{background:#5A4120}.m4{background:#552D35}
+.course-line{display:flex;align-items:center;gap:18px;margin-top:38px;max-width:1510px}.course-dot{width:20px;height:20px;border-radius:50%;background:var(--amber);flex:none}.course-line p{font-size:31px;line-height:1.45;color:#C7D0DC}.course-line b{color:var(--ink)}
+.agenda{margin-top:36px;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}.agenda .step{min-height:190px;padding:24px 17px;border-top:7px solid var(--blue);background:#171D26;border-radius:0 0 16px 16px}.agenda .step:nth-child(n+3):nth-child(-n+6){border-color:var(--amber)}.agenda .step:last-child{border-color:var(--mint)}.agenda b{display:block;font-size:30px;margin-bottom:12px}.agenda p{font-size:22px;line-height:1.4;color:#B8C1CE}.ratio{margin-top:34px;display:flex;align-items:center;gap:22px}.ratio .track{height:28px;flex:1;background:#252D39;border-radius:30px;overflow:hidden;display:flex}.ratio .talking{width:30%;background:#526176}.ratio .doing{width:70%;background:var(--amber)}.ratio strong{font-size:34px;color:var(--amber);white-space:nowrap}
+.data-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center;margin-top:40px}.statpair{display:flex;gap:44px;align-items:flex-end}.statpair .statnum{font-size:150px;line-height:.9;font-weight:950;color:var(--amber)}.statpair .statnum.altc{color:var(--blue)}.statpair .label{font-size:28px;line-height:1.4;color:#CDD5E0;margin-top:16px}.gapbar{margin-top:30px}.gaprow{margin:22px 0}.gaprow .lab{display:flex;justify-content:space-between;font-size:25px;margin-bottom:9px;color:#D5DBE4}.gaprow .rail{height:30px;background:#242C38;border-radius:20px;overflow:hidden}.gaprow .fill{height:100%;border-radius:20px;background:var(--blue)}.gaprow .fill.amber{background:var(--amber)}.source{font-size:19px;line-height:1.45;color:#788598;margin-top:24px}
+.survey-chart{margin-top:35px;max-width:1380px}.survey-row{display:grid;grid-template-columns:510px 1fr 110px;gap:25px;align-items:center;margin:19px 0}.survey-row .q{font-size:28px;color:#D8DEE7}.survey-row .rail{height:38px;background:#242C38;border-radius:30px;overflow:hidden}.survey-row .fill{height:100%;background:linear-gradient(90deg,var(--blue),#71A1FF);border-radius:30px}.survey-row:nth-child(2) .fill,.survey-row:nth-child(3) .fill{background:linear-gradient(90deg,#BA7A19,var(--amber))}.survey-row .v{font-size:30px;font-weight:900;color:var(--ink)}
+.reveal-btn{margin-top:30px;border:2px solid var(--amber);background:#231D12;color:#FFD68A;border-radius:999px;padding:15px 28px;font:800 24px var(--sans);cursor:pointer}.reveal-target{opacity:.13;filter:blur(8px);transform:translateY(8px);transition:.35s ease}.reveal-target.shown{opacity:1;filter:none;transform:none}.taskbox{margin-top:34px;padding:36px 42px;background:#171D26;border-left:8px solid var(--amber);border-radius:0 22px 22px 0}.taskbox h3{font-size:36px;margin-bottom:16px}.taskbox p{font-size:30px;line-height:1.55;color:#D2D9E3}.timer{position:absolute;right:130px;top:104px;font-size:25px;font-weight:850;color:var(--amber);letter-spacing:2px}.checkline{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:42px}.checkline div{padding:26px 22px;background:#171D26;border-radius:16px;font-size:25px;line-height:1.45}.checkline b{display:block;color:var(--amber);font-size:31px;margin-bottom:9px}.next-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}.next-grid div{padding:30px;background:#171D26;border-radius:18px;border-top:6px solid var(--blue)}.next-grid div:nth-child(2){border-color:var(--amber)}.next-grid div:nth-child(3){border-color:var(--mint)}.next-grid div:nth-child(4){border-color:var(--rose)}.next-grid h3{font-size:30px;margin-bottom:14px}.next-grid p{font-size:24px;line-height:1.45;color:#BFC8D4}
+.donut-wrap{display:grid;grid-template-columns:560px 1fr;gap:75px;align-items:center;margin-top:34px}.donut{width:480px;height:480px;border-radius:50%;background:conic-gradient(var(--amber) 0 33.3%,var(--blue) 33.3% 58.3%,var(--mint) 58.3% 80.5%,var(--rose) 80.5% 91.6%,#687386 91.6% 100%);position:relative}.donut:after{content:'36 份\A回覆';white-space:pre;position:absolute;inset:112px;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center;font-size:42px;line-height:1.3;font-weight:900}.legend{display:flex;flex-direction:column;gap:17px}.legend-row{display:grid;grid-template-columns:26px 1fr 95px;gap:18px;align-items:center;font-size:28px;color:#CDD5E0}.legend-row i{width:22px;height:22px;border-radius:6px}.legend-row b{font-size:31px;color:var(--ink);text-align:right}
+.family{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}.family-card{min-height:305px;border-radius:22px;padding:30px;background:#171D26;border:2px solid #26303D}.family-card .emo{font-size:54px}.family-card h3{font-size:34px;margin:18px 0 10px}.family-card p{font-size:24px;line-height:1.55;color:#AEB8C5}.family-card small{display:block;margin-top:17px;color:var(--amber);font-size:21px}.formula{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:48px}.formula .box{padding:28px 34px;background:#171D26;border:2px solid #2B3543;border-radius:18px;font-size:31px;font-weight:900;text-align:center}.formula .plus{font-size:40px;color:var(--dim2)}.formula .equals{font-size:45px;color:var(--amber)}
+.md-card{margin-top:32px;display:grid;grid-template-columns:560px 1fr;gap:44px;align-items:stretch}.brain{background:#201B12;border:2px solid #5B451D;border-radius:24px;padding:36px;text-align:center;display:flex;flex-direction:column;justify-content:center}.brain .emo{font-size:110px}.brain h3{font-size:38px;margin:18px 0 8px;color:var(--amber)}.brain p{font-size:25px;line-height:1.5;color:#D9CDB6}.md-code{background:#10141A;border:2px solid #2A3441;border-radius:22px;padding:30px 34px;font-size:24px;line-height:1.62;color:#C8D1DD}.md-code b{color:var(--amber)}.md-code .muted{color:#7D8897}
+</style>
+
+<div class="wrap">
+  <header class="hd">
+    <h2>90 分鐘整合版｜從每天卡住的工作開始</h2>
+    <p>先讓大家看見 AI 能幫上的地方，再用問卷與外部資料確認問題，接著完成需求釐清、修正與部門實作。</p>
+  </header>
+  <div class="deck">
+
+  <!-- 01 -->
+  <div class="frame"><section class="s">
+    <div class="kick">森 呼 吸 集 團　│　A I 工 作 力 實 戰</div>
+    <h1>讓 AI 真的變成<br>你的<em>左右手</em></h1>
+    <div class="bar" style="margin-top:44px"><span>今天想請它幫你做什麼？</span><div class="caret"></div></div>
+    <div class="g3" style="margin-top:40px">
+      <div class="tile warm"><div class="emo">🎒</div><h3>帶什麼來</h3><p>一件你每週都要做、又很花時間的事</p></div>
+      <div class="tile warm"><div class="emo">✅</div><h3>帶走什麼</h3><p>一個工作上用得上的第一版成果</p></div>
+      <div class="tile warm"><div class="emo">🫶</div><h3>不知道怎麼問？</h3><p>沒關係，今天就一起練。</p></div>
+    </div>
+    <div class="stamp">第一堂 · 90 分鐘</div><div class="pgn">01</div>
+  </section></div>
+
+  <!-- 02 從部門日常切入 -->
+  <div class="frame"><section class="s alt">
+    <img class="scene-img" src="assets/ai-work-scenes-v1.png" alt="三個部門的 AI 工作情境示意">
+    <div class="scene-shade"></div>
+    <div style="position:relative;z-index:1;max-width:980px">
+      <div class="mark">如果明天多一個很會做事的同事</div>
+      <h1 class="sm">哪一件事，你最想請 AI<br><em>幫忙？</em></h1>
+      <div class="ask-list">
+        <div class="ask"><span class="n">01</span><span>早上打開電腦，今天要注意什麼，已經有人整理好</span></div>
+        <div class="ask"><span class="n">02</span><span>兩張叫貨、出貨資料對不起來，先抓出不合理的那幾筆</span></div>
+        <div class="ask"><span class="n">03</span><span>有活動要發，先照團隊平常的風格，做出圖文第一版</span></div>
+      </div>
+      <p class="sub" style="font-size:27px;max-width:770px">這裡面，有沒有你每天都在忙的事？</p>
+    </div>
+    <div class="stamp">情境插圖為示意，非公司實際資料</div><div class="pgn">02</div>
+  </section></div>
+
+  <!-- 03 痛點互動 -->
+  <div class="frame"><section class="s">
+    <div class="kick">先 問 大 家</div>
+    <h1>你是不是也有一件事，<br>每次做到這裡就<em>卡住？</em></h1>
+    <button class="reveal-btn" type="button" onclick="this.nextElementSibling.classList.add('shown');this.textContent='原來大家卡得很像'">先請 3 位夥伴說，再看大家的答案</button>
+    <div class="chips reveal-target" style="margin-top:34px;max-width:1500px">
+      <span class="chip">不知道怎麼開口問</span><span class="chip">回答很多，卻不是我要的</span><span class="chip">不知道該給多少資料</span><span class="chip">怕它亂講</span><span class="chip">最後還是自己重做</span>
+    </div>
+    <p class="sub">先不用解決。記住你剛剛想到的那件事，等一下會拿它來練。</p>
+    <div class="pgn">03</div>
+  </section></div>
+
+  <!-- 04 外部企業資料 -->
+  <div class="frame"><section class="s alt">
+    <div class="mark">先看看外面的公司走到哪裡</div>
+    <h1 class="sm">很多公司已經開始，<br>但多數還在<em>試怎麼放進工作</em></h1>
+    <div class="data-layout">
+      <div class="statpair">
+        <div><div class="statnum">88%</div><div class="label">至少在一個部門<br>固定使用 AI</div></div>
+        <div><div class="statnum altc">近 2/3</div><div class="label">還沒開始把 AI<br>擴到全公司</div></div>
+      </div>
+      <div>
+        <div class="note" style="margin-top:0">重點不是「有沒有開過 AI」，而是能不能把它放進<b>每天真的會做的工作</b>。</div>
+        <p class="source">來源：McKinsey《The State of AI 2025》，1,993 位受訪者、105 個國家。原文為組織層級調查。</p>
+      </div>
+    </div>
+    <div class="pgn">04</div>
+  </section></div>
+
+  <!-- 05 森呼吸現況 -->
+  <div class="frame"><section class="s">
+    <div class="mark">再回來看我們自己</div>
+    <h1 class="sm">森呼吸夥伴，<br>這堂課最想先改善<em>什麼？</em></h1>
+    <div class="donut-wrap">
+      <div class="donut"></div>
+      <div class="legend">
+        <div class="legend-row"><i style="background:var(--amber)"></i><span>放進每天的工作流程</span><b>12 人</b></div>
+        <div class="legend-row"><i style="background:var(--blue)"></i><span>整理與分析資料</span><b>9 人</b></div>
+        <div class="legend-row"><i style="background:var(--mint)"></i><span>把需求講清楚</span><b>8 人</b></div>
+        <div class="legend-row"><i style="background:var(--rose)"></i><span>把答案修到能用</span><b>4 人</b></div>
+        <div class="legend-row"><i style="background:#687386"></i><span>多認識一些用法</span><b>3 人</b></div>
+      </div>
+    </div>
+    <p class="source">課前問卷共 36 份回覆；本圖使用單選題，因此可以用圓餅圖呈現。</p>
+    <div class="pgn">05</div>
+  </section></div>
+
+  <!-- 06 今天怎麼解 -->
+  <div class="frame"><section class="s alt">
+    <div class="mark">那今天要怎麼解？</div>
+    <h1 class="sm">先練兩件事</h1>
+    <div class="g2" style="margin-top:52px">
+      <div class="tile warm" style="min-height:330px"><div class="big">01</div><h3 style="font-size:42px">把問題問對</h3><p style="font-size:29px">不是背一句厲害的提示詞。先說你想做什麼，再從 AI 的回答看出還少了什麼。</p></div>
+      <div class="tile" style="min-height:330px"><div class="big" style="color:var(--mint)">02</div><h3 style="font-size:42px">讓 AI 認識這件工作</h3><p style="font-size:29px">讓它知道資料從哪裡來、給誰看、哪些不能自己猜，做法才會慢慢靠近你。</p></div>
+    </div>
+    <p class="sub">今天會用同一件工作，<b>問一次、看一次、再修一次。</b></p>
+    <div class="pgn">06</div>
+  </section></div>
+
+  <!-- 07 AI 大家庭 -->
+  <div class="frame"><section class="s">
+    <div class="mark">先知道你現在用的是哪一塊</div>
+    <h1 class="sm">AI 大家庭</h1>
+    <div class="formula" style="margin-top:58px">
+      <div class="box">💬 對話<br><span style="font-size:22px;color:var(--dim)">一來一往問清楚</span></div><div class="plus">＋</div>
+      <div class="box">🧠 模型<br><span style="font-size:22px;color:var(--dim)">負責理解與產出</span></div><div class="plus">＋</div>
+      <div class="box">🧰 工具<br><span style="font-size:22px;color:var(--dim)">搜尋、檔案、圖片、Code</span></div>
+    </div>
+    <div class="note" style="margin-top:50px">當 AI 有了<b>工作說明與工具</b>，就能接著完成多個步驟，這類做法常被稱為 <b>Agent</b>。可重複使用的工作說明，常被整理成 <b>Skill</b>。</div>
+    <p class="source">概念依 OpenAI Agents／Skills 與 Anthropic Agent Skills 官方文件整理。不同產品的功能名稱與做法會不同。</p>
+    <div class="pgn">07</div>
+  </section></div>
+
+  <!-- 08 Skill 成品想像 -->
+  <div class="frame"><section class="s alt">
+    <div class="mark">Skill 可以從部門裡反覆出現的工作長出來</div>
+    <h1 class="sm">先留下做法，<br>再慢慢變成<em>部門能力</em></h1>
+    <div class="four">
+      <div class="move m1"><div class="ico">📌</div><div><b>業務／採購</b><p>把關注的市場、客戶與商品來源整理成待確認清單</p></div><small>先輔助蒐集，不代替判斷</small></div>
+      <div class="move m2"><div class="ico">🔎</div><div><b>財務／出貨</b><p>照約定欄位比對兩份資料，標出差異與缺漏</p></div><small>異常仍由同仁確認</small></div>
+      <div class="move m3"><div class="ico">🎨</div><div><b>行銷／內容</b><p>依品牌規則試做文案或圖片草稿，再由人員修改</p></div><small>從第一版開始</small></div>
+      <div class="move m4"><div class="ico">🪞</div><div><b>個人工作</b><p>回看這週做了什麼、卡在哪裡，下週先處理哪一件</p></div><small>週報先用來自我盤點</small></div>
+    </div>
+    <p class="sub">今天先做出<b>可以檢查的第一版</b>。規則經過幾次修正後，才適合留給下一次使用。</p>
+    <div class="pgn">08</div>
+  </section></div>
+
+  <!-- 09 常見落差 -->
+  <div class="frame"><section class="s">
+    <div class="mark">知道它能做，不代表第一次就做得對</div>
+    <h1 class="sm">你心裡有答案，<br>AI 卻<em>看不到</em></h1>
+    <div class="talk" style="margin-top:30px">
+      <div class="me">幫我整理這份資料</div>
+      <div class="ai">可以，但「整理」可能是摘要、比對、分類，也可能是做成主管看的回報。</div>
+      <div class="me">那我要怎麼一次講完？</div>
+      <div class="ai warm"><b>不用一次講完。</b>先讓我問你一個最重要的問題。</div>
+    </div>
+    <p class="sub">這堂課不是背「完美提示詞」。我們會練的是：<b>一來一往，把需求越問越清楚。</b></p>
+    <div class="pgn">09</div>
+  </section></div>
+
+  <!-- 10 語言模型 -->
+  <div class="frame"><section class="s alt">
+    <div class="kick">那 它 到 底 是 什 麼</div>
+    <h1 class="sm">「今天天氣真……」<br>你會接<em>什麼？</em></h1>
+    <div style="margin-top:34px">
+      <div style="font-size:42px;font-weight:900;color:#CBD3DD">「今天天氣真　　　」</div>
+      <div class="chips">
+        <span class="chip on">好 👍</span><span class="chip">不錯</span><span class="chip">糟</span><span class="chip gh">熱</span><span class="chip gh">悶</span>
+      </div>
+    </div>
+    <p class="sub">它從大量資料中學習怎麼接話，所以回得又快又順。<br>
+    <b>但它不知道我們公司的出貨規則，也不知道你主管在意什麼。</b></p>
+    <div class="note">接得很順，也可能答錯。<b>重要的內容，我們還是要核對。</b></div>
+    <div class="pgn">10</div>
+  </section></div>
+
+  <!-- 11 新人 -->
+  <div class="frame"><section class="s">
+    <div class="mark">換個方式想</div>
+    <h1 class="sm">把它當成<em>今天報到的新人</em></h1>
+    <div class="split" style="margin-top:32px">
+      <svg width="260" height="260" viewBox="0 0 120 120" fill="none" style="flex:none">
+        <circle cx="60" cy="60" r="56" fill="#151B23" stroke="#2A3341" stroke-width="2"/>
+        <circle cx="60" cy="47" r="17" fill="#2B6BE4"/>
+        <path d="M32 92c3-16 14-24 28-24s25 8 28 24" fill="#22304A"/>
+        <rect x="74" y="20" width="34" height="24" rx="9" fill="#FFB020"/>
+        <path d="M82 44l-3 8 9-8z" fill="#FFB020"/>
+        <path d="M82 30h18M82 36h12" stroke="#1A1408" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div class="ai warm" style="max-width:none;font-size:35px">
+        「我今天第一天上班。<br>
+        我不認識你們的客人，不知道你們的規矩，<br>
+        <b>也不知道你心裡想的是什麼。</b><br><br>
+        這份要給誰看？你希望我幫你做到哪裡？」
+      </div>
+    </div>
+    <p class="sub">你不會對新人說「幫我整理一下」就走開。<b>你會告訴他：這份給誰、他看完要做什麼、哪些事不准自己猜。</b></p>
+    <div class="pgn">11</div>
+  </section></div>
+
+  <!-- 12 MD 出場 -->
+  <div class="frame"><section class="s alt">
+    <div class="kick">今 天 會 直 接 交 給 大 家</div>
+    <h1>一顆每個部門<br>都能先用的<em>「需求大腦」</em></h1>
+    <p class="sub" style="max-width:1250px">當你不知道怎麼說，它會先問你。當你答不出來，它會給選項。<br><b>你只要拿一件真的工作來回答。</b></p>
+    <div class="stamp">下一頁直接打開給大家看</div>
+    <div class="pgn">12</div>
+  </section></div>
+
+  <!-- 13 MD 大腦 -->
+  <div class="frame"><section class="s">
+    <div class="mark">不會問？今天把這顆大腦帶走</div>
+    <h1 class="sm">這份 MD，會先替你<em>問問題</em></h1>
+    <div class="md-card">
+      <div class="brain"><div class="emo">🧠</div><h3>幫我把工作講清楚.md</h3><p>一份可以直接分享、貼進對話的文字說明書</p></div>
+      <div class="md-code"><b># 幫我把工作講清楚</b><br><br>直接跟我說你最近哪件工作最麻煩就好。<br><br><b>一次只問一個問題</b>，問完就先做一小塊給我看。<br>我說不知道時，給我兩三個選項。<br>資料裡沒有的事實，不要自己補。<br><br><span class="muted">今天會把完整檔案交給大家，不用自己重寫。</span></div>
+    </div>
+    <div class="pgn">13</div>
+  </section></div>
+
+  <!-- 14 第一次實作 -->
+  <div class="frame"><section class="s alt">
+    <div class="timer">動手做｜8 分鐘</div>
+    <div class="mark">第一輪｜先不用 MD</div>
+    <h1 class="sm">現在，拿一件工作<br><em>直接問一次</em></h1>
+    <div class="taskbox">
+      <h3>請完成這一句</h3>
+      <p>我每次要＿＿＿＿，最卡的是＿＿＿＿，<br>希望最後可以得到＿＿＿＿。</p>
+    </div>
+    <div class="checkline">
+      <div><b>1</b>把這句貼給 AI</div>
+      <div><b>2</b>看第一版結果</div>
+      <div><b>3</b>圈出能用的地方</div>
+      <div><b>4</b>找一個不對的地方</div>
+      <div><b>5</b>先保留，不用急著改</div>
+    </div>
+    <div class="note">沒有工作資料的人，可以先用學員練習包。手上的真實資料先拿掉姓名、電話與地址。</div>
+    <div class="pgn">14</div>
+  </section></div>
+
+  <!-- 15 使用 MD -->
+  <div class="frame"><section class="s">
+    <div class="timer">動手做｜18 分鐘</div>
+    <div class="mark">第二輪｜把剛才那份 MD 貼上去</div>
+    <h1 class="sm">這一次，<br>換 AI <em>一步一步問你</em></h1>
+    <div class="g2" style="margin-top:38px">
+      <div class="tile warm">
+        <div class="emo">📄</div><h3>貼上課堂提供的 MD</h3>
+        <p>它會一次問一個問題，陪你把用途、資料和想要的結果慢慢講清楚。</p>
+      </div>
+      <div class="tile">
+        <div class="emo">💬</div><h3>照真實狀況回答</h3>
+        <p>不知道就說不知道。可以請它給兩個選項，也可以請它先做五行讓你看。</p>
+      </div>
+    </div>
+    <button class="reveal-btn" type="button" onclick="this.nextElementSibling.classList.add('shown');this.textContent='卡住時可以這樣說'">卡住了？點開一句救援</button>
+    <div class="ai warm reveal-target" style="margin-top:22px;max-width:1100px">「我現在說不出來，你先問我一個最重要的問題。一次一題就好。」</div>
+    <div class="note">最後請 AI 用五句話整理：這份成果給誰、拿來做什麼、會提供哪些資料、不能亂猜什麼、最後要長什麼樣子。</div>
+    <div class="pgn">15</div>
+  </section></div>
+
+  <!-- 16 修正 -->
+  <div class="frame"><section class="s alt">
+    <div class="timer">動手做｜20 分鐘</div>
+    <div class="mark">現在，把答案修到能用</div>
+    <h1 class="sm">不要只說「再好一點」，<br>告訴它<em>哪裡不對</em></h1>
+    <div class="checkline" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>01</b>少了哪一筆資料？</div>
+      <div><b>02</b>哪一句是它自己猜的？</div>
+      <div><b>03</b>給錯人看，還是格式不對？</div>
+      <div><b>04</b>你要補資料，還是改要求？</div>
+    </div>
+    <div class="taskbox">
+      <h3>至少修一次，而且要說得出原因</h3>
+      <p>「這一段把尚未確認的事寫成結論了。請改成待確認，並保留原始資料。」</p>
+    </div>
+    <p class="sub">修完再問自己：如果現在要交給主管、同事或客人，我敢不敢送出去？</p>
+    <div class="pgn">16</div>
+  </section></div>
+
+  <!-- 17 部門真實工作 -->
+  <div class="frame"><section class="s">
+    <div class="timer">動手做｜20 分鐘</div>
+    <div class="mark">換成你這週真的要做的工作</div>
+    <h1 class="sm">同一套問法，<br>放進不同部門會<em>長得不一樣</em></h1>
+    <div class="g3" style="margin-top:38px">
+      <div class="tile"><div class="emo">📣</div><h3>業務／採購</h3><p>每天要注意的市場訊息、商品比較、選品資料整理。</p></div>
+      <div class="tile"><div class="emo">🔎</div><h3>財務／出貨</h3><p>兩份資料比對、找出差異、標出還需要人工確認的紀錄。</p></div>
+      <div class="tile"><div class="emo">🎨</div><h3>行銷／內容</h3><p>照品牌習慣做文案與圖片初稿，保留正確的商品資料。</p></div>
+    </div>
+    <div class="taskbox" style="margin-top:28px;padding:28px 38px">
+      <h3>再跑一次完整流程</h3>
+      <p>講需求 → 看結果 → 找問題 → 補資料或追問 → 修成能用的成果</p>
+    </div>
+    <p class="source">上列為代表情境，不表示每個部門只有這些用途。練習資料皆為教學示意。</p>
+    <div class="pgn">17</div>
+  </section></div>
+
+  <!-- 18 驗收與系列預告 -->
+  <div class="frame"><section class="s alt">
+    <div class="timer">收尾｜10 分鐘</div>
+    <div class="mark">下課前，把今天真的做過的留下來</div>
+    <h1 class="sm">交一張成果卡，<br>也替下一堂留下<em>材料</em></h1>
+    <div class="checkline">
+      <div><b>我怎麼問</b>第一次怎麼交代</div>
+      <div><b>AI 做了什麼</b>第一版結果</div>
+      <div><b>哪裡不對</b>找到的落差</div>
+      <div><b>我怎麼修</b>補了什麼資料</div>
+      <div><b>最後得到什麼</b>能用的成果</div>
+    </div>
+    <div class="next-grid">
+      <div><h3>自動整理週報</h3><p>把固定資料變成每週摘要</p></div>
+      <div><h3>定時追蹤訊息</h3><p>每天或每週收到需要注意的變化</p></div>
+      <div><h3>資料比對 Skill</h3><p>讓差異檢查留下固定規則</p></div>
+      <div><h3>品牌內容 Skill</h3><p>文案與圖片更靠近團隊習慣</p></div>
+    </div>
+    <p class="sub" style="font-size:28px">今天先把一件工作做完。下一堂，就從大家這次卡住的地方繼續。</p>
+    <div class="pgn">18</div>
+  </section></div>
+
+  </div>
+  <p class="foot">
+    這一版已把開場、互動、外部資料、課堂實作與成果驗收放進同一份 18 頁流程。<br>
+    第 02 頁的部門工作情境是示意畫面，不是公司實際資料，簡報上已標註。<br>
+    問卷數字沿用 36 份回覆的口徑（複選題，比例不可相加）；外部資料來源標在第 05 頁。
+  </p>
+</div>
+
+<script>
+(function(){
+  function fit(){
+    document.querySelectorAll('.frame').forEach(function(f){
+      f.style.setProperty('--k', f.clientWidth/1920);
+    });
+  }
+  fit();
+  window.addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
