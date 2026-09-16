@@ -1,21 +1,24 @@
 ---
-name: marketing-design-ai
-description: 製作與修訂森呼吸的社群平面設計，包含 IG Story、IG／FB 貼文、Hero 主視覺與多尺寸延伸；依品牌資料、正反例與回饋累積設計習慣。
+name: sales-live-design
+description: 引導森呼吸業務部製作與修訂直播社群視覺，包含直播預告、IG Story、IG／FB 貼文、Hero 主視覺與多尺寸延伸；依主管可查看的正反例與回饋累積設計習慣。
 ---
 
-# 社群平面設計 AI
+# 業務部直播設計 AI
 
-把需求轉成手機上容易讀、行動明確、符合品牌習慣的社群視覺。每次設計同時完成作品與可追溯的學習紀錄。
+逐題引導業務夥伴把直播需求轉成手機上容易讀、行動明確、符合品牌習慣的社群視覺。每次設計同時完成作品與主管可查看的學習回報。
+
+本 Skill 僅處理業務部直播相關設計。其他部門或非直播任務應回到公司共用入口，選擇對應部門流程。
 
 ## 開始前
 
-1. 讀取 `knowledge/BRAND_PROFILE.md`、`knowledge/COPY_STYLE.md`、`knowledge/DESIGN_MEMORY.md`。
-2. 查看 `examples/approved/` 與 `examples/rejected/` 中和本次任務相近的案例與說明。
-3. 依任務讀取：
+1. 若由公開連結啟動，先依 `ONLINE_START.md` 一次一題完成需求訪談。
+2. 讀取 `knowledge/BRAND_PROFILE.md`、`knowledge/COPY_STYLE.md`、`knowledge/DESIGN_MEMORY.md`。
+3. 查看 `examples/approved/` 與 `examples/rejected/` 中和本次任務相近的案例與說明。
+4. 依任務讀取：
    - 要決定尺寸時讀 `references/SOCIAL_SIZES.md`。
    - 要構圖、安排 CTA 或檢查品質時讀 `references/DESIGN_RULES.md`。
    - 要完成從需求到回饋紀錄的全流程時讀 `references/WORKFLOW.md`。
-4. 將資料分成「已確認」「合理推論」「待確認」。缺少的資料若會改變主訊息、CTA、日期、價格或交付尺寸，先詢問；其餘可依既有品牌習慣提出第一版，並標明假設。
+5. 將資料分成「已確認」「合理推論」「待確認」。缺少的資料若會改變主訊息、CTA、直播日期、價格或交付尺寸，先詢問；其餘可依既有品牌習慣提出第一版，並標明假設。
 
 ## 設計流程
 
@@ -63,4 +66,4 @@ Hero 確認後再延伸 IG Story、IG／FB 貼文或其他比例。每個尺寸�
 
 ## 完成條件
 
-交付包含正確尺寸的成品或可執行設計稿、必要的設計說明，以及更新後的 Log。只有經驗證的偏好才進入 Memory；只有固定規則才改 Skill。
+交付包含正確尺寸的成品或可執行設計稿、必要的設計說明，以及一份可貼回 repo 的《直播設計回報》。只有經驗證的偏好才進入 Memory；只有固定規則才改 Skill。
