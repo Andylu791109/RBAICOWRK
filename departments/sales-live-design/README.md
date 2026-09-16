@@ -7,9 +7,10 @@
 ## 線上開始
 
 1. 開啟 [`ONLINE_START.md`](ONLINE_START.md)。
-2. 複製裡面的啟動指令，貼到 ChatGPT、Codex、Claude 或其他能讀取網頁的 AI。
-3. AI 會一次問一題，帶你完成需求、Hero 主視覺、多尺寸延伸與檢查。
-4. 完成後，把 AI 產出的《直播設計回報》交給主管或 repo 維護者。
+2. 依 [`FOLDER_SETUP.md`](FOLDER_SETUP.md) 建立直播設計資料夾。
+3. 在 ChatGPT 建立「森呼吸｜業務部直播設計」雲端 Project。
+4. 複製啟動指令並上傳本次素材；AI 會一次問一題，帶你完成需求、Hero 主視覺、多尺寸延伸與檢查。
+5. 完成後，把成品、《直播設計回報》及可分享的對話連結交給主管或 repo 維護者。
 
 如果使用的 AI 無法讀取網址，可開啟 [`SKILL.md`](SKILL.md)，複製全文貼入對話。
 
@@ -77,6 +78,7 @@
 | `references/WORKFLOW.md` | 從需求、Hero 到回饋學習的完整流程 |
 | `examples/approved/` | 被採用的正例與原因 |
 | `examples/rejected/` | 被退回的反例、問題與修正方式 |
+| `FOLDER_SETUP.md` | 業務夥伴的資料夾建立與檔名規則 |
 
 ## 主管如何查看
 
