@@ -41,6 +41,7 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`COMPANY_AI_RULES.md`](COMPANY_AI_RULES.md) | 公司共通的 AI 協作底線 |
 | [`PRIVACY_AND_SUBMISSION.md`](PRIVACY_AND_SUBMISSION.md) | 資料遮蔽與作業提交規則 |
 | [`departments/`](departments/) | 各部門可辨認的工作情境 |
+| [`departments/sales-live-design/`](departments/sales-live-design/) | 業務部直播社群設計線上引導與學習紀錄 |
 | [`WORKER_START_PROMPT.md`](WORKER_START_PROMPT.md) | 同仁版啟動 Prompt，依部門給連結 |
 | [`departments/agents/`](departments/agents/) | 各部門 AI 助手指令，供 AI 讀取執行 |
 | [`departments/CALIBRATED_CONTEXT.md`](departments/CALIBRATED_CONTEXT.md) | 已收到的主管校準工作與驗收條件 |

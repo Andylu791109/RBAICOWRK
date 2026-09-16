@@ -14,6 +14,7 @@
 - [`FINANCE.md`](FINANCE.md)：財務
 - [`MANAGEMENT.md`](MANAGEMENT.md)：主管與跨部門
 - [`MARKETING.md`](MARKETING.md)：行銷、官網營運與成效追蹤
+- [`sales-live-design/`](sales-live-design/)：業務部直播社群設計的線上引導、品牌記憶與正反例
 - [`SPA.md`](SPA.md)：SPA 課程、服務與活動
 
 ## 各部門 AI 助手指令
