@@ -23,6 +23,8 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 - 一項經過需求釐清、產出、檢查與修正的工作成果。
 - `AI協作學習紀錄.md`：用於課程驗收與後續改善。
 
+課後要持續累積使用方式、修正經驗與部門知識，請依 [`GitHub 紀錄與回寫流程`](facilitator/GITHUB_RECORD_LOOP.md) 辦理；紀錄公開前須由主管檢查並去識別化。
+
 ## 核心原則
 
 - 不要求使用者憑空定義需求，先用選項協助辨認。
@@ -48,6 +50,9 @@ https://raw.githubusercontent.com/Andylu791109/RBAICOWRK/main/AI_WORK_PARTNER_WI
 | [`facilitator/DELIVERY_CHECK.md`](facilitator/DELIVERY_CHECK.md) | 主管與講師驗收時的對照表 |
 | [`platform-guides/`](platform-guides/) | 各 AI 平台的保存方式 |
 | [`templates/`](templates/) | 個人設定與學習紀錄格式 |
+| [`records/`](records/README.md) | 去識別化的單次工作與學習紀錄 |
+| [`knowledge/`](knowledge/README.md) | 經主管確認、可重複使用的部門知識 |
+| [`facilitator/GITHUB_RECORD_LOOP.md`](facilitator/GITHUB_RECORD_LOOP.md) | 紀錄、驗收、跨期比較與知識回寫流程 |
 | [`facilitator/CLASS_GUIDE.md`](facilitator/CLASS_GUIDE.md) | 講師帶領與驗收流程 |
 | [`facilitator/COMPATIBILITY_TEST.md`](facilitator/COMPATIBILITY_TEST.md) | 不同 AI 的相容性測試 |
 | [`facilitator/SUPERVISOR_START_PROMPT.md`](facilitator/SUPERVISOR_START_PROMPT.md) | 可直接貼入任何 AI 的主管版啟動 Prompt |
