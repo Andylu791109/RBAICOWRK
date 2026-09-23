@@ -18,7 +18,7 @@
 
 1. 在原本的工作環境完成主管檢查與去識別化。公開分支與 Pull Request 不是私下審稿空間。
 2. 從最新 `main` 建立工作分支，複製學習紀錄範本，填入 `records/<department>/<record_id>.md`；確認 `record_id` 沒有被用過。
-3. 對照下方清單再檢查一次，提交到自己的分支並開 Pull Request。審核者核對欄位、來源與公開適宜性後才合併。
+3. 對照下方清單再檢查一次，執行 `python scripts/check_learning_records.py` 核對欄位、編號與來源連結，然後提交到自己的分支並開 Pull Request。審核者核對內容與公開適宜性後才合併；腳本通過不能代替人工審核。
 4. 知識條目另外提交到 `knowledge/<department>/`，附來源 `record_id` 和主管確認狀態。必要時回頭將原紀錄的 `linked_knowledge_id` 補上。
 
 ## 提交前檢查
