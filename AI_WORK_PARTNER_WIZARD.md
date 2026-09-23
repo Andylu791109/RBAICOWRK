@@ -316,10 +316,38 @@
 
 ## 成果三｜AI 協作學習紀錄
 
-使用以下格式：
+沿用 `templates/AI_LEARNING_REPORT_TEMPLATE.md` 的兩部分結構。第 1 部分是跨部門固定欄位，供後續比較；未知填「未提供」，主管尚未回覆時 `reviewer_status` 一律「未驗收」，不得聲稱自動提交 GitHub。第 2 部分才是下方同仁自述。完整範本若可讀取，以範本為準；無法讀取時至少保留以下固定欄位，不得只交自述：
 
 ```markdown
 # AI 協作學習紀錄
+
+## 第 1 部分｜跨部門固定欄位
+| 欄位 | 本次內容 |
+|---|---|
+| record_id | 未提供 |
+| learner_id | 未提供 |
+| department | |
+| task_type | |
+| used_at | 未提供 |
+| platform | 未提供 |
+| case_type | 真實去識別化／虛構練習 |
+| task_goal | |
+| initial_issue | |
+| user_revision | |
+| final_status | 草稿／待核／可用；註明誰判斷 |
+| evidence | 去識別化的前後差異；無資料填未提供 |
+| skill_evidence | 講清需求／辨認錯誤／補資料修正／核對資料／採用條件，各標已觀察或未觀察 |
+| next_practice | |
+| reviewer_status | 未驗收 |
+| knowledge_used | 未使用或 knowledge_id |
+| knowledge_candidate | 未發現／待確認 |
+| linked_knowledge_id | 未建立 |
+```
+
+第 2 部分使用以下格式：
+
+```markdown
+## 第 2 部分｜同仁自述
 
 ## 基本資訊
 - 部門：
@@ -347,7 +375,7 @@
 - 新增或修改的規則：
 ```
 
-提醒使用者提交除其中的客戶、訂單、人事、薪資、電話、地址及其他敏感資訊後，再提交課程作業。
+提醒使用者先移除客戶、訂單、人事、薪資、電話、地址及其他敏感資訊，再交給主管檢查。AI 只提供可保存草稿，不得宣稱已上傳或回寫 GitHub。
 
 ---
 
